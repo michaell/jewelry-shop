@@ -1,0 +1,89 @@
+.cost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 82px;
+  margin-bottom: 100px;
+
+  &__calc {
+    width: 340px;
+  }
+}
+
+.circle {
+  &__text {
+    font-family: "IBM Plex";
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    word-spacing: 8px;
+    animation: motion normal infinite 30s linear;
+    transform-origin: 50% 50%;
+  }
+
+  &:hover &__text {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes motion {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form {
+  &__text {
+    margin: 0;
+    font-size: 22px;
+    line-height: 36px;
+    margin-bottom: 9px;
+  }
+
+  &__select {
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 340px;
+    appearance: none;
+    background-image: url(../img/polygon.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+  }
+
+  &__input {
+    margin-bottom: 40px;
+    width: 90px;
+  }
+
+  &__input,
+  &__select {
+    font-family: "IBM Plex Serif";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 17px 26px;
+    background-color: var(--main-color);
+  }
+}
+
+.total {
+  display: none;
+  margin-top: 24px;
+  &__price {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+  }
+
+  &__info {
+    color: var(--text-color);
+  }
+
+  &__email {
+    color: var(--text-color);
+    text-decoration: underline;
+    display: block;
+    margin-top: 4px;
+  }
+}

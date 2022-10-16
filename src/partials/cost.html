@@ -1,0 +1,47 @@
+<div class="cost">
+  <div class="cost__title">
+    <svg class="circle" width="200" height="200" viewBox="0 0 200 200">
+      <path
+        id="circleShape"
+        class="circle__shape"
+        d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+        fill="none"
+      ></path>
+      <path
+        class="circle__arrow"
+        d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115"
+        fill="none"
+        stroke="#2B2024"
+        stroke-width="2"
+      ></path>
+      <text class="circle__text">
+        <textPath href="#circleShape">Calculate your price</textPath>
+      </text>
+    </svg>
+  </div>
+  <div class="cost__calc">
+    <form>
+      <p class="form__text">Choose your product</p>
+      <select class="form__select" id="select">
+        <option value="0" selected disabled>Choose from the list</option>
+        <option value="100">Bracelet (100)</option>
+        <option value="300">Gold ring (300)</option>
+        <option value="500">Necklace (500)</option>
+      </select>
+      <p class="form__text">Choose the quantity:</p>
+      <input class="form__input" type="number" value="0" min="0" />
+      <button type="button" class="link btn-calc">Calculate</button>
+    </form>
+    <div class="total">
+      <p class="total__price">
+        Final price: <span class="total__amount"></span>
+      </p>
+      <p class="total__info">
+        Send yuor message to
+        <a href="mailto:order@jewelry.com" class="total__email"
+          >order@jewelry.com</a
+        >
+      </p>
+    </div>
+  </div>
+</div>

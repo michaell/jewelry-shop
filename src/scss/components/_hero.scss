@@ -1,0 +1,89 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 74px;
+  margin-bottom: 123px;
+
+  &__descr {
+    flex-basis: 460px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: "IBM Plex";
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 120%;
+    margin-bottom: 38px;
+  }
+
+  &__txt {
+    margin: 0;
+    font-size: 22px;
+    line-height: 150%;
+    margin-bottom: 45px;
+  }
+
+  &__photos {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 352px;
+      height: 536px;
+      background-repeat: no-repeat;
+      background-image: url(../img/rectangle.svg);
+      background-size: cover;
+      position: absolute;
+      left: 38px;
+      bottom: 35px;
+    }
+  }
+
+  &__svg--large,
+  &__img--large {
+    width: 352px;
+    height: 536px;
+  }
+
+  &__svg--small,
+  &__img--small {
+    width: 233px;
+    height: 319px;
+  }
+}
+
+// ***************************Adaptive***************************
+@media (max-width: 1150px) {
+  .hero {
+    &__svg--large {
+      width: 31vw;
+      height: 47vw;
+      border-radius: 0px 13vw 0px 15vw;
+    }
+
+    &__img--large,
+    &__img--small {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__photos::after {
+      width: 31vw;
+      height: 47vw;
+      left: 3vw;
+      bottom: 3vw;
+    }
+
+    &__svg--small {
+      width: 19vw;
+      height: 28vw;
+      border-radius: 0px 13vw 0px 0px;
+    }
+  }
+}

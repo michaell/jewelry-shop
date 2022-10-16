@@ -1,0 +1,17 @@
+.link {
+  font-size: 20px;
+  border: none;
+  width: 100%;
+  text-align: center;
+  background: var(--accent-color);
+  color: var(--main-color);
+  padding: 16px 0;
+  display: block;
+  max-width: 300px;
+  transition: 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--accent-color-hover);
+  }
+}
