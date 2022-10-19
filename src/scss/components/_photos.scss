@@ -45,3 +45,40 @@
     object-fit: cover;
   }
 }
+
+// ***************************Adaptive***************************
+@media (max-width: 950px) {
+  .photos {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .photos {
+    margin-bottom: 50px;
+
+    &__grid {
+      grid-template-columns: 1fr 180px 1fr;
+      grid-template-rows: 150px 150px;
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .photos {
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 500px) {
+  .photos {
+    // margin-bottom: 50px;
+
+    &__grid {
+      grid-template-columns: 1fr 36vw 1fr;
+      grid-template-rows: 30vw 30vw;
+      gap: 5px;
+    }
+  }
+}
