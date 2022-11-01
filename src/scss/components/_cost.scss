@@ -11,6 +11,9 @@
 }
 
 .circle {
+  width: 240px;
+  height: 240px;
+
   &__text {
     font-family: "IBM Plex";
     text-transform: uppercase;
@@ -52,6 +55,18 @@
   &__input {
     margin-bottom: 40px;
     width: 90px;
+    outline: none;
+
+    // remove arrows in input field for Chrome, Safari, Edge, Opera
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    // the same for Firefox
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
   }
 
   &__input,
@@ -89,14 +104,20 @@
 }
 
 // ***************************Adaptive***************************
-
-.cost {
-  .form {
-    &__text,
-    &__select,
-    &__input {
-      font-size: 18px;
+@media (max-width: 1150px) {
+  .cost {
+    .form {
+      &__text,
+      &__select,
+      &__input {
+        font-size: 18px;
+      }
     }
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -105,6 +126,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 40px;
+    margin-bottom: 50px;
 
     &__title {
       margin: 0 auto;
@@ -119,8 +141,45 @@
     max-width: 100%;
   }
 
-  .circle__arrow {
-    transform: rotate(90deg);
-    transform-origin: center;
+  .circle {
+    width: 185px;
+    height: 185px;
+    margin-bottom: -15px;
+
+    &__arrow {
+      transform: rotate(90deg);
+      transform-origin: center;
+    }
+  }
+}
+@media (max-width: 580px) {
+  .cost {
+    margin-bottom: 35px;
+  }
+  .circle {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+@media (max-width: 500px) {
+  .circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  @media (max-width: 1150px) {
+    .circle {
+      margin-bottom: -25px;
+    }
+    .cost {
+      .form {
+        &__text,
+        &__select,
+        &__input {
+          font-size: 15px;
+        }
+      }
+    }
   }
 }

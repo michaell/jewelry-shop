@@ -7,9 +7,15 @@
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
-  // colors
-  --main-color: #efe3df;
-  --accent-color: #673d3f;
-  --accent-color-hover: #b05459;
-  --text-color: #2b2024;
+  // original colors
+  //   --main-color: #efe3df;
+  //   --accent-color: #673d3f;
+  //   --accent-color-hover: #b05459;
+  //   --text-color: #2b2024;
+
+  // colors **
+  --main-color: white;
+  --accent-color: #bd1e51;
+  --accent-color-hover: #e82b69;
+  --text-color: #490b3d;
 }

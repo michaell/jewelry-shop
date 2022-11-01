@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -36,6 +37,7 @@ a {
 
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  position: relative;
 }
 
 .is-hidden {
@@ -132,10 +134,6 @@ p {
 }
 
 @media (max-width: 767px) {
-  .container {
-    max-width: 600px;
-  }
-
   .section-title {
     margin-bottom: 24px;
     font-size: 40px;
