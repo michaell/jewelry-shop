@@ -85,10 +85,11 @@
 .total {
   display: none;
   margin-top: 24px;
+
   &__price {
-    font-size: 40px;
+    font-size: 32px;
     color: var(--accent-color);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   &__info {
@@ -151,6 +152,15 @@
       transform-origin: center;
     }
   }
+
+  .total {
+    &__price {
+      font-size: 28px;
+    }
+    &__info {
+      font-size: 19px;
+    }
+  }
 }
 @media (max-width: 580px) {
   .cost {
@@ -166,6 +176,15 @@
   .circle {
     width: 130px;
     height: 130px;
+  }
+
+  .total {
+    &__price {
+      font-size: 22px;
+    }
+    &__info {
+      font-size: 16px;
+    }
   }
 
   @media (max-width: 1150px) {
